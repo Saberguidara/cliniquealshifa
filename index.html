@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinique AlShifa — Votre santé, notre priorité | Sfax, Tunisie</title>
+  <meta name="description" content="Clinique AlShifa, clinique médicale privée à Sfax, Tunisie. Cardiologie, pédiatrie, radiologie, chirurgie, urgences 24h/24 et laboratoire. Équipe experte et équipements modernes." />
+  <meta name="keywords" content="clinique sfax, médecin sfax, cardiologie tunisie, pédiatrie sfax, urgences sfax, AlShifa" />
+  <meta property="og:title" content="Clinique AlShifa — Votre santé, notre priorité" />
+  <meta property="og:description" content="Clinique médicale privée à Sfax, Tunisie. Soins de qualité, équipe de spécialistes, disponible 24h/24." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts — Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50:  '#EFF6FF',
+              100: '#DBEAFE',
+              200: '#BFDBFE',
+              300: '#93C5FD',
+              400: '#60A5FA',
+              500: '#3B82F6',
+              600: '#2563EB',
+              700: '#1D4ED8',
+              800: '#1E40AF',
+              900: '#1E3A8A',
+            }
+          },
+          fontFamily: { inter: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-inter text-slate-800 bg-white">
+
+  <!-- ============================================================
+       HEADER / NAVBAR
+  ============================================================ -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+
+        <!-- Logo -->
+        <a href="#accueil" class="flex items-center gap-2.5 group">
+          <div class="w-9 h-9 bg-primary-800 rounded-lg flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
+            </svg>
+          </div>
+          <span class="text-xl font-extrabold tracking-tight">
+            <span class="text-primary-800">Al</span><span class="text-slate-800">Shifa</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#accueil"    class="nav-link">Accueil</a>
+          <a href="#services"   class="nav-link">Services</a>
+          <a href="#medecins"   class="nav-link">Médecins</a>
+          <a href="#contact"    class="nav-link">Contact</a>
+        </div>
+
+        <!-- Desktop CTA -->
+        <div class="hidden lg:block">
+          <a href="#contact" id="nav-rdv-btn" class="btn-primary">Prendre RDV</a>
+        </div>
+
+        <!-- Hamburger (mobile) -->
+        <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2 rounded-lg" aria-label="Ouvrir le menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="lg:hidden overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+        <div class="py-4 space-y-1 border-t border-slate-200/60 bg-white/95 backdrop-blur-sm rounded-b-2xl">
+          <a href="#accueil"    class="mobile-nav-link">Accueil</a>
+          <a href="#services"   class="mobile-nav-link">Services</a>
+          <a href="#medecins"   class="mobile-nav-link">Médecins</a>
+          <a href="#contact"    class="mobile-nav-link">Contact</a>
+          <div class="pt-3 px-3">
+            <a href="#contact" class="btn-primary block text-center">Prendre RDV</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="accueil" class="min-h-screen bg-gradient-to-br from-primary-50 via-white to-blue-50 pt-20 flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+        <!-- Texte -->
+        <div class="animate-on-scroll">
+          <div class="inline-flex items-center gap-2 bg-primary-100 text-primary-800 text-sm font-semibold px-4 py-2 rounded-full mb-6 shadow-sm">
+            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            Disponible 24h/24 — 7j/7
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold text-slate-900 leading-tight mb-6">
+            Votre santé,<br/>
+            <span class="text-primary-800">notre priorité.</span>
+          </h1>
+          <p class="text-lg text-slate-600 leading-relaxed mb-8 max-w-lg">
+            La Clinique AlShifa vous offre des soins médicaux d'excellence à Sfax. Une équipe de spécialistes dévoués, des équipements de pointe, pour votre bien-être et celui de votre famille.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contact" id="hero-rdv-btn" class="btn-primary text-center">Prendre Rendez-Vous</a>
+            <a href="#services" id="hero-services-btn" class="btn-secondary text-center">Nos Services</a>
+          </div>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-slate-200">
+            <div>
+              <div class="text-3xl font-extrabold text-primary-800">15+</div>
+              <div class="text-sm text-slate-500 mt-1">Années d'expérience</div>
+            </div>
+            <div>
+              <div class="text-3xl font-extrabold text-primary-800">50+</div>
+              <div class="text-sm text-slate-500 mt-1">Médecins spécialistes</div>
+            </div>
+            <div>
+              <div class="text-3xl font-extrabold text-primary-800">10k+</div>
+              <div class="text-sm text-slate-500 mt-1">Patients satisfaits</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Hero -->
+        <div class="animate-on-scroll delay-200 flex justify-center lg:justify-end">
+          <div class="relative">
+            <div class="hero-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=620&q=80"
+                alt="Clinique AlShifa — Soins médicaux professionnels à Sfax"
+                class="hero-image"
+                loading="eager"
+              />
+            </div>
+            <!-- Badge flottant gauche -->
+            <div class="floating-badge" style="top:2rem;left:-1.5rem;animation-delay:0s;">
+              <div class="bg-white shadow-xl rounded-2xl p-3.5 flex items-center gap-3">
+                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div>
+                  <div class="text-xs text-slate-500">Patients guéris</div>
+                  <div class="font-bold text-slate-800 text-sm">10 000+</div>
+                </div>
+              </div>
+            </div>
+            <!-- Badge flottant droit -->
+            <div class="floating-badge" style="bottom:2rem;right:-1.5rem;animation-delay:1.5s;">
+              <div class="bg-white shadow-xl rounded-2xl p-3.5 flex items-center gap-3">
+                <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-primary-800" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div>
+                  <div class="text-xs text-slate-500">Disponibilité</div>
+                  <div class="font-bold text-slate-800 text-sm">24h / 24</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES
+  ============================================================ -->
+  <section id="services" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Entête section -->
+      <div class="text-center mb-16 animate-on-scroll">
+        <div class="badge-subtitle">Nos Spécialités</div>
+        <h2 class="section-title">Des soins complets pour toute la famille</h2>
+        <p class="section-desc">De la prévention à la guérison, nos spécialistes vous accompagnent à chaque étape avec des technologies de pointe.</p>
+      </div>
+
+      <!-- Grille des services -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+
+        <!-- Cardiologie -->
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon bg-red-50">
+            <svg class="w-7 h-7 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Cardiologie</h3>
+          <p class="service-desc">Diagnostic et traitement des maladies cardiovasculaires avec des équipements de haute précision.</p>
+          <a href="#contact" class="service-link">En savoir plus →</a>
+        </div>
+
+        <!-- Pédiatrie -->
+        <div class="service-card animate-on-scroll delay-100">
+          <div class="service-icon bg-yellow-50">
+            <svg class="w-7 h-7 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Pédiatrie</h3>
+          <p class="service-desc">Suivi médical de vos enfants de la naissance à l'adolescence, dans un environnement bienveillant.</p>
+          <a href="#contact" class="service-link">En savoir plus →</a>
+        </div>
+
+        <!-- Radiologie -->
+        <div class="service-card animate-on-scroll delay-200">
+          <div class="service-icon bg-purple-50">
+            <svg class="w-7 h-7 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Radiologie</h3>
+          <p class="service-desc">Imagerie médicale avancée : IRM, scanner, radiographie et échographie pour un diagnostic précis.</p>
+          <a href="#contact" class="service-link">En savoir plus →</a>
+        </div>
+
+        <!-- Chirurgie -->
+        <div class="service-card animate-on-scroll delay-100">
+          <div class="service-icon bg-blue-50">
+            <svg class="w-7 h-7 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Chirurgie</h3>
+          <p class="service-desc">Interventions chirurgicales en ambulatoire ou hospitalisées par des chirurgiens expérimentés.</p>
+          <a href="#contact" class="service-link">En savoir plus →</a>
+        </div>
+
+        <!-- Urgences -->
+        <div class="service-card animate-on-scroll delay-200">
+          <div class="service-icon bg-orange-50">
+            <svg class="w-7 h-7 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Urgences</h3>
+          <p class="service-desc">Service d'urgences ouvert 24h/24 et 7j/7, avec une équipe médicale prête à intervenir immédiatement.</p>
+          <a href="#contact" class="service-link">En savoir plus →</a>
+        </div>
+
+        <!-- Laboratoire -->
+        <div class="service-card animate-on-scroll delay-300">
+          <div class="service-icon bg-green-50">
+            <svg class="w-7 h-7 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Laboratoire</h3>
+          <p class="service-desc">Analyses biologiques complètes avec résultats rapides, traitement des prélèvements en interne.</p>
+          <a href="#contact" class="service-link">En savoir plus →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       POURQUOI NOUS CHOISIR
+  ============================================================ -->
+  <section id="pourquoi" class="py-20 lg:py-28 bg-primary-800 text-white relative overflow-hidden">
+    <!-- Décoration fond -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-white/5 rounded-full"></div>
+      <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-white/5 rounded-full"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/3 rounded-full"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+      <!-- Entête section -->
+      <div class="text-center mb-16 animate-on-scroll">
+        <div class="badge-subtitle-light">Notre Engagement</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Pourquoi choisir AlShifa ?</h2>
+        <p class="text-primary-200 max-w-2xl mx-auto text-lg leading-relaxed">Nous mettons à votre disposition le meilleur de la médecine moderne, avec une approche humaine et personnalisée.</p>
+      </div>
+
+      <!-- Grille des arguments -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Équipe experte -->
+        <div class="why-card animate-on-scroll">
+          <div class="why-icon">
+            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Équipe experte</h3>
+          <p class="text-primary-200 leading-relaxed">Plus de 50 médecins spécialistes certifiés, formés dans les meilleures facultés de médecine nationales et internationales.</p>
+        </div>
+
+        <!-- Équipements modernes -->
+        <div class="why-card animate-on-scroll delay-200">
+          <div class="why-icon">
+            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Équipements modernes</h3>
+          <p class="text-primary-200 leading-relaxed">Technologies médicales de dernière génération pour des diagnostics précis, des traitements efficaces et un suivi optimal.</p>
+        </div>
+
+        <!-- 24h/24 -->
+        <div class="why-card animate-on-scroll delay-400">
+          <div class="why-icon">
+            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Disponible 24h/24</h3>
+          <p class="text-primary-200 leading-relaxed">Notre service d'urgences est ouvert en permanence. Parce que la santé n'attend pas, nous sommes là à toute heure.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MÉDECINS
+  ============================================================ -->
+  <section id="medecins" class="py-20 lg:py-28 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Entête section -->
+      <div class="text-center mb-16 animate-on-scroll">
+        <div class="badge-subtitle">Notre Équipe</div>
+        <h2 class="section-title">Des spécialistes à votre écoute</h2>
+        <p class="section-desc">Rencontrez quelques-uns de nos médecins expérimentés, dévoués à votre santé et à votre confort.</p>
+      </div>
+
+      <!-- Grille des médecins -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Dr. Sonia Belhadj -->
+        <div class="doctor-card animate-on-scroll">
+          <div class="doctor-img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=480&q=80"
+              alt="Dr. Sonia Belhadj — Cardiologue à la Clinique AlShifa Sfax"
+              class="doctor-img"
+              loading="lazy"
+            />
+            <div class="doctor-overlay">
+              <a href="#contact" class="btn-white-sm">Prendre RDV</a>
+            </div>
+          </div>
+          <div class="doctor-info">
+            <h3 class="doctor-name">Dr. Sonia Belhadj</h3>
+            <p class="doctor-specialty">Cardiologue</p>
+            <div class="doctor-stars">★★★★★</div>
+          </div>
+        </div>
+
+        <!-- Dr. Karim Mansour -->
+        <div class="doctor-card animate-on-scroll delay-200">
+          <div class="doctor-img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=480&q=80"
+              alt="Dr. Karim Mansour — Chirurgien à la Clinique AlShifa Sfax"
+              class="doctor-img"
+              loading="lazy"
+            />
+            <div class="doctor-overlay">
+              <a href="#contact" class="btn-white-sm">Prendre RDV</a>
+            </div>
+          </div>
+          <div class="doctor-info">
+            <h3 class="doctor-name">Dr. Karim Mansour</h3>
+            <p class="doctor-specialty">Chirurgien Général</p>
+            <div class="doctor-stars">★★★★★</div>
+          </div>
+        </div>
+
+        <!-- Dr. Amira Trabelsi -->
+        <div class="doctor-card animate-on-scroll delay-400">
+          <div class="doctor-img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=480&q=80"
+              alt="Dr. Amira Trabelsi — Pédiatre à la Clinique AlShifa Sfax"
+              class="doctor-img"
+              loading="lazy"
+            />
+            <div class="doctor-overlay">
+              <a href="#contact" class="btn-white-sm">Prendre RDV</a>
+            </div>
+          </div>
+          <div class="doctor-info">
+            <h3 class="doctor-name">Dr. Amira Trabelsi</h3>
+            <p class="doctor-specialty">Pédiatre</p>
+            <div class="doctor-stars">★★★★★</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TÉMOIGNAGES
+  ============================================================ -->
+  <section id="temoignages" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Entête section -->
+      <div class="text-center mb-16 animate-on-scroll">
+        <div class="badge-subtitle">Témoignages</div>
+        <h2 class="section-title">Ce que disent nos patients</h2>
+        <p class="section-desc">La satisfaction de nos patients est notre plus belle récompense. Découvrez leurs témoignages authentiques.</p>
+      </div>
+
+      <!-- Grille des témoignages -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Témoignage 1 -->
+        <div class="testimonial-card animate-on-scroll">
+          <div class="flex text-yellow-400 mb-4 text-xl gap-0.5">★★★★★</div>
+          <p class="text-slate-600 italic mb-6 leading-relaxed">"Une clinique exceptionnelle ! Le Dr. Mansour m'a pris en charge avec beaucoup de professionnalisme. Le personnel est chaleureux et l'accueil impeccable."</p>
+          <div class="flex items-center gap-3">
+            <div class="avatar bg-primary-800">MK</div>
+            <div>
+              <div class="font-semibold text-slate-800">Mohamed Khaskhoussi</div>
+              <div class="text-sm text-slate-500">Patient — Chirurgie</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Témoignage 2 -->
+        <div class="testimonial-card animate-on-scroll delay-200">
+          <div class="flex text-yellow-400 mb-4 text-xl gap-0.5">★★★★★</div>
+          <p class="text-slate-600 italic mb-6 leading-relaxed">"Ma fille a été suivie par le Dr. Trabelsi dès sa naissance. Une pédiatre dévouée, à l'écoute, et toujours disponible pour répondre à nos inquiétudes."</p>
+          <div class="flex items-center gap-3">
+            <div class="avatar bg-rose-500">SA</div>
+            <div>
+              <div class="font-semibold text-slate-800">Salma Achouri</div>
+              <div class="text-sm text-slate-500">Patiente — Pédiatrie</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Témoignage 3 -->
+        <div class="testimonial-card animate-on-scroll delay-400">
+          <div class="flex text-yellow-400 mb-4 text-xl gap-0.5">★★★★★</div>
+          <p class="text-slate-600 italic mb-6 leading-relaxed">"J'ai eu recours aux urgences AlShifa en pleine nuit. Accueil immédiat, prise en charge rapide. Le service d'urgence est vraiment à la hauteur, je recommande fortement."</p>
+          <div class="flex items-center gap-3">
+            <div class="avatar bg-green-600">YB</div>
+            <div>
+              <div class="font-semibold text-slate-800">Yassine Boughanmi</div>
+              <div class="text-sm text-slate-500">Patient — Urgences</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section id="contact" class="py-20 lg:py-28 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Entête section -->
+      <div class="text-center mb-16 animate-on-scroll">
+        <div class="badge-subtitle">Nous Contacter</div>
+        <h2 class="section-title">Prendre un rendez-vous</h2>
+        <p class="section-desc">Remplissez le formulaire ou contactez-nous directement. Nous vous répondrons dans les plus brefs délais.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+
+        <!-- Formulaire -->
+        <div class="animate-on-scroll">
+          <form id="contact-form" class="contact-form-card" novalidate>
+            <h3 class="text-xl font-bold text-slate-800 mb-6">Envoyer un message</h3>
+
+            <div class="form-group">
+              <label for="nom" class="form-label">Nom complet *</label>
+              <input type="text" id="nom" name="nom" class="form-input" placeholder="Votre nom et prénom" required autocomplete="name" />
+              <span class="form-error" id="nom-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Adresse email *</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="votre@email.com" required autocomplete="email" />
+              <span class="form-error" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="telephone" class="form-label">Téléphone</label>
+              <input type="tel" id="telephone" name="telephone" class="form-input" placeholder="+216 XX XXX XXX" autocomplete="tel" />
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message *</label>
+              <textarea id="message" name="message" rows="5" class="form-input resize-none" placeholder="Décrivez votre besoin ou la spécialité souhaitée..." required></textarea>
+              <span class="form-error" id="message-error"></span>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn-primary w-full">
+              Envoyer le message
+            </button>
+
+            <!-- Message de succès -->
+            <div id="form-success" class="hidden mt-4 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 text-center font-medium">
+              ✅ Votre message a bien été envoyé ! Nous vous contacterons très bientôt.
+            </div>
+          </form>
+        </div>
+
+        <!-- Informations de contact + Carte -->
+        <div class="space-y-6 animate-on-scroll delay-200">
+
+          <div class="contact-info-card">
+            <h3 class="text-xl font-bold text-slate-800 mb-6">Nos coordonnées</h3>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon bg-primary-100">
+                <svg class="w-5 h-5 text-primary-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-slate-800 text-sm">Adresse</div>
+                <div class="text-slate-600 text-sm mt-0.5">Avenue Habib Bourguiba, Sfax 3000, Tunisie</div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon bg-green-100">
+                <svg class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-slate-800 text-sm">Téléphone</div>
+                <div class="text-slate-600 text-sm mt-0.5">+216 74 000 000</div>
+                <div class="text-slate-600 text-sm">+216 74 000 001 (Urgences)</div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon bg-blue-100">
+                <svg class="w-5 h-5 text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-slate-800 text-sm">Email</div>
+                <div class="text-slate-600 text-sm mt-0.5">contact@clinique-alshifa.tn</div>
+              </div>
+            </div>
+
+            <div class="contact-info-item border-none pb-0">
+              <div class="contact-info-icon bg-orange-100">
+                <svg class="w-5 h-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-slate-800 text-sm">Horaires</div>
+                <div class="text-slate-600 text-sm mt-0.5">Lun–Sam : 08h00 – 20h00</div>
+                <div class="text-slate-600 text-sm">Urgences : 24h/24, 7j/7</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Maps Sfax -->
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103837.44508881396!2d10.698400699999999!3d34.7405012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1301b2e64d8b3b1d%3A0xf013e4fc7cce02!2sSfax!5e0!3m2!1sfr!2stn!4v1713129600000!5m2!1sfr!2stn"
+              width="100%"
+              height="240"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localisation Clinique AlShifa, Sfax, Tunisie"
+            ></iframe>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="bg-slate-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+        <!-- Marque -->
+        <div class="lg:col-span-2">
+          <a href="#accueil" class="flex items-center gap-2.5 mb-5 group">
+            <div class="w-9 h-9 bg-primary-800 rounded-lg flex items-center justify-center shadow-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
+              </svg>
+            </div>
+            <span class="text-xl font-extrabold tracking-tight">
+              <span class="text-primary-400">Al</span><span class="text-white">Shifa</span>
+            </span>
+          </a>
+          <p class="text-slate-400 leading-relaxed max-w-sm text-sm">
+            Clinique médicale privée à Sfax, dédiée à votre santé avec des soins de qualité, une équipe experte et des technologies médicales modernes.
+          </p>
+          <!-- Réseaux sociaux -->
+          <div class="flex gap-3 mt-6">
+            <a href="#" class="social-btn" aria-label="Facebook AlShifa">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Instagram AlShifa">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"/><path stroke-width="2" d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="LinkedIn AlShifa">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Liens rapides -->
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#accueil"     class="footer-link">Accueil</a></li>
+            <li><a href="#services"    class="footer-link">Nos Services</a></li>
+            <li><a href="#medecins"    class="footer-link">Nos Médecins</a></li>
+            <li><a href="#temoignages" class="footer-link">Témoignages</a></li>
+            <li><a href="#contact"     class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Spécialités -->
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Spécialités</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#services" class="footer-link">Cardiologie</a></li>
+            <li><a href="#services" class="footer-link">Pédiatrie</a></li>
+            <li><a href="#services" class="footer-link">Radiologie</a></li>
+            <li><a href="#services" class="footer-link">Chirurgie</a></li>
+            <li><a href="#services" class="footer-link">Urgences 24h/24</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Barre inférieure -->
+      <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-slate-500 text-sm">© 2025 Clinique AlShifa. Tous droits réservés.</p>
+        <p class="text-slate-500 text-sm">Sfax, Tunisie — +216 74 000 000</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="main.js" defer></script>
+</body>
+</html>
