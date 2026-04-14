@@ -14,9 +14,9 @@ Aucune installation npm nécessaire. Le projet utilise uniquement des CDN.
 
 #### Avec WAMP / XAMPP _(recommandé)_
 
-1. Placer le dossier dans `C:\wamp\www\landingpage\`
+1. Placer le dossier dans `C:\wamp\www\cliniquealshifa\`
 2. Démarrer WAMP
-3. Ouvrir dans le navigateur : `http://localhost/landingpage/`
+3. Ouvrir dans le navigateur : `http://localhost/cliniquealshifa/`
 
 #### Avec VS Code Live Server
 
@@ -26,7 +26,7 @@ Aucune installation npm nécessaire. Le projet utilise uniquement des CDN.
 #### Avec Python
 
 ```bash
-cd C:\wamp\www\landingpage
+cd C:\wamp\www\cliniquealshifa
 python -m http.server 8080
 # Ouvrir : http://localhost:8080
 ```
@@ -36,7 +36,7 @@ python -m http.server 8080
 ## 📁 Structure du projet
 
 ```
-landingpage/
+cliniquealshifa/
 ├── index.html              ← Structure HTML sémantique (8 sections)
 ├── style.css               ← Animations, variables CSS, composants custom
 ├── main.js                 ← Navbar sticky, scroll, hamburger, form
